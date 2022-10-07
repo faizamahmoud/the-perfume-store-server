@@ -2,15 +2,15 @@
 
 
 ## User Stories:
-As a user, I want to create an account
-As a user, I want to login to my account
-As a user, I want to Browse available perfumes
-As a user, I want to see the details of desired perfume
-As a user, I want to add a perfume to my wishlist
-As a user, I want to add a perfume to my cart
-As a user, I want to purchase a perfume in my cart
-As a user, I want to take a quiz and get matched to perfumes
-As a user, I want to see matched perfumes
+- As a user, I want to create an account
+- As a user, I want to login to my account 
+- As a user, I want to Browse available perfumes
+- As a user, I want to see the details of desired perfume
+- As a user, I want to add a perfume to my wishlist
+- As a user, I want to add a perfume to my cart
+- As a user, I want to purchase a perfume in my cart
+- As a user, I want to take a quiz and get matched to perfumes
+- As a user, I want to see matched perfumes
 
 ## API  
 creating one this weekend
