@@ -1,7 +1,7 @@
-#Perfume Store(name not yet decided)
+# Perfume Store(name not yet decided)
 
 
-##User Stories:
+## User Stories:
 As a user, I want to create an account
 As a user, I want to login to my account
 As a user, I want to Browse available perfumes
@@ -12,23 +12,23 @@ As a user, I want to purchase a perfume in my cart
 As a user, I want to take a quiz and get matched to perfumes
 As a user, I want to see matched perfumes
 
-##API  
+## API  
 creating one this weekend
 
 
-##Routes
+## Routes
 ![image](https://user-images.githubusercontent.com/56799470/194616337-cedd3884-8580-42c7-bc0a-18b6ae80c634.png)
 
 
-##Client-side
+## Client-side
 ![image](https://user-images.githubusercontent.com/56799470/194618458-69dc6b5c-9248-42ab-9aba-efa30104981f.png)
 
 
-##ERD
+## ERD
 ![image](https://user-images.githubusercontent.com/56799470/194637710-2f18cb07-444a-49fe-8b7f-3928ecdb69e0.png)
 
 
-##Flow Charts
+## Flow Charts
 
 ![image](https://user-images.githubusercontent.com/56799470/194635329-4604c15d-8622-49ac-a423-052a1f159782.png)
 
