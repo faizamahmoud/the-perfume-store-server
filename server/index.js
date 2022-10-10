@@ -2,9 +2,9 @@ const express = require('express')
 const app = express()
 const cors = require("cors")
 const morgan = require("morgan")
-const mongoose = require("mongoose");
-const PORT = 4000;
 
+const PORT = 4000;
+require('dotenv').config();
 
 
 // controllers
@@ -15,9 +15,7 @@ const inventory = require('./controllers/inventory_controller');
 
 
 // middleware
-app.get('/', (req, res) => {
-    res.send('Hello World')
-})
+
 app.use(express.json()); 
 app.use(cors()); // to prevent cors errors, open access to all origins
 app.use(morgan("dev")); // logging for development

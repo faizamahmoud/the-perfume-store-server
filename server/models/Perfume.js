@@ -1,4 +1,4 @@
-
+const mongoose = require("mongoose");
 
 const PerfumeSchema = new mongoose.Schema({
     "id": Number,
