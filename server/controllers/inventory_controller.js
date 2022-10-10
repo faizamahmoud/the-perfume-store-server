@@ -1,15 +1,17 @@
-// Inventory requires two routes: index and show routes
-
 const express = require('express')
 const router = express.Router();
-
+const { Perfume } = require('../models')
 
 
 router.get("/", async (req, res) => {
-	res.status(200).json({message: "all inventory"})
+    try {
+
+        res.json(await Perfume.find({}));
+    } catch (error) {
+
+        res.status(400).json(error);
+    }
 });
 
-router.get("/:id", async (req,res) => {
-    res.status(200).json({message: "one perfume"})
-})
-module.exports=router;
+
+module.exports = router;

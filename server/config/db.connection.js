@@ -1,5 +1,5 @@
 require('dotenv').config()
-// const axios = require('axios')
+const axios = require('axios')
 const mongoose = require('mongoose');
 const { Perfume } = require('../models')
 
@@ -14,17 +14,16 @@ mongoose.connection
   .on("error", (error) => console.log(error));
 
 
-// const seedingData = async () => {
-//   try {
-//     const response = await axios.get('https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Ordinary_Drink');
-//     const allDrinks = response.data.drinks
-//     const deletedDrinks = await Drinks.deleteMany({})
-//     const addedDrinks = await Drinks.insertMany(allDrinks);
+const seedData = async () => {
+  try {
+    const response = await axios.get('https://my-perfumes-api.herokuapp.com/perfumes');
+    const perfumesList = response.data;
+    const addPerfumes = await Perfume.insertMany(perfumesList);
 
-//   } catch (err) {
-//     console.log(err);
-//   }
-// }
+  } catch (err) {
+    console.log(err);
+  }
+}
 
 
-// seedingData();
+seedData();
