@@ -1,14 +1,24 @@
 import './App.scss';
 import { Route, Routes } from "react-router-dom";
+import React from 'react';
+// components
+import Header from './components/Header';
+
+// pages
 import Home from '../src/pages/Home'
+
 
 function App() {
   return (
     <div className="App">
-    <Routes>
-      <Route path="/" element={<Home />} />
-    </Routes> 
-  </div>
+      <Header />
+      {/* <section className='nav'>
+        <Header />
+      </section> */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </div>
   )
 }
 

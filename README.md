@@ -12,8 +12,9 @@
 - As a user, I want to take a quiz and get matched to perfumes
 - As a user, I want to see matched perfumes
 
-## API  
-creating one this weekend
+## API
+
+https://github.com/faizamahmoud/perfume-api
 
 
 ## Routes
@@ -34,5 +35,5 @@ creating one this weekend
 
 ![image](https://user-images.githubusercontent.com/56799470/194635538-4a16fae8-4f09-46cf-8b21-2f4637a1eec0.png)
 
-###https://miro.com/app/board/uXjVPP4pGDY=/
+### https://miro.com/app/board/uXjVPP4pGDY=/
 
