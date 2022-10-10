@@ -1,15 +1,19 @@
 // const {Perfume} = require('../models')
 
 // const seedData = async () => {
-//   try {
-//     const response = await axios.get('https://my-perfumes-api.herokuapp.com/perfumes');
-//     const perfumesList = response.data;
-//     const addPerfumes = await Perfume.insertMany(perfumesList);
+//     try {
+//         const response = await fetch('https://my-perfumes-api.herokuapp.com/perfumes');
+//         let perfumeslist = await response.json();
+//         perfumesList = perfumesList.data
+//         console.log('hello', response);
 
-//   } catch (err) {
-//     console.log(err);
-//   }
+//         const addPerfume = await Perfume.insertMany(perfumesList);
+
+//         console.log(addPerfume)
+
+//     } catch (err) {
+//         console.log(err);
+//     }
 // }
-
 
 // seedData();

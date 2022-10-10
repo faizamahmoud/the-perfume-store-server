@@ -1,5 +1,8 @@
-npm init -y
-npm install dotenv mongoose express cors morgan
-npm install --save-dev nodemon
-npm i morgan cors
-npm i axios
+- npm init -y
+- npm install dotenv mongoose express cors morgan
+- npm install --save-dev nodemon
+- npm install morgan cors
+- npm install axios
+- npm install --save mongoose-unique-validator
+- npm i passport passport-jwt jsonwebtoken
+- npm i bcrypt
