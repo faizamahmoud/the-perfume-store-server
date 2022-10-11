@@ -1,6 +1,7 @@
 import './App.scss';
 import { Route, Routes } from "react-router-dom";
 import React from 'react';
+
 // components
 import Header from './components/Header';
 
@@ -12,12 +13,8 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* <section className='nav'>
-        <Header />
-      </section> */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
+      <Main />
+      
     </div>
   )
 }
