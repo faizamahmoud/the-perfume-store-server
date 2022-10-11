@@ -12,15 +12,15 @@ var UserSchema = mongoose.Schema({
     "password": { type: String, required: true },
     "perfumes purchased": {
         type: [mongoose.Types.ObjectId],
-        ref: "Product",
+        ref: "Perfume",
     },
     "wishlist": {
         type: [mongoose.Types.ObjectId],
-        ref: "Product",
+        ref: "Perfume",
     },
     "basket": {
         type: [mongoose.Types.ObjectId],
-        ref: "Product",
+        ref: "Perfume",
     },
 
 },
