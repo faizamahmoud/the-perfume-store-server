@@ -1,18 +1,20 @@
-// import { Link } from "react-router-dom"
-// import '../styles/Header.scss'
+import { Route, Routes } from "react-router-dom";
 import Home from "../pages/Home";
+
 
 const Main = () => {
     return (
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/" element={<Login />} />
-            <Route path="/" element={<Register />} />
-            <Route path="/" element={<Match />} />
-            <Route path="/" element={<Basket />} />
-            <Route path="/" element={<Profile />} />
+        <main>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/register" element={<Register />} />
+                <Route path="/match" element={<Match />} />
+                <Route path="/basket" element={<Basket />} />
+                <Route path="/profile" element={<Profile />} />
 
-        </Routes>
+            </Routes>
+        </main>
     )
 }
 

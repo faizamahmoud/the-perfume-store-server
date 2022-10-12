@@ -1,12 +1,7 @@
 import './App.scss';
-import { Route, Routes } from "react-router-dom";
 import React from 'react';
-
-// components
 import Header from './components/Header';
-
-// pages
-import Home from '../src/pages/Home'
+import Main from './components/Main';
 
 
 function App() {
@@ -14,7 +9,6 @@ function App() {
     <div className="App">
       <Header />
       <Main />
-      
     </div>
   )
 }
