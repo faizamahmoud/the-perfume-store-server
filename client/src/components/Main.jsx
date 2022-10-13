@@ -1,14 +1,23 @@
 import { Route, Routes } from "react-router-dom";
-import Home from "../pages/Home";
-import Register from "../pages/Register"
+import Perfumes from "../pages/Perfumes"
+import Product from "../pages/Product"
+import React, { useState, useEffect } from 'react';
+
+  
 
 
 const Main = () => {
+
+    const url = 'http://perfume-store-fm.herokuapp.com/inventory';
+    const [data, setData] = useState({});
+
+
     return (
         <main>
-            <h1>Hello World</h1>
             <Routes>
-                <Route path="/register" element={<Register />} />
+                {/* <Route path="/" element={<Perfumes url={url} data={data} setData={setData}/>} /> */}
+                <Route path="/" element={<Perfumes/>} />
+                <Route path="/:id" element={<Product/>}/>
             </Routes>
         </main>
     )

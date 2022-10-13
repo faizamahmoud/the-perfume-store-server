@@ -7,7 +7,9 @@ $ npm install sass
 $ npm i react-router-dom
 $ npm i @material-ui/core
 $ npm i @mui/icons-material
-
+$ npm install @userfront/core
+npm install react-bootstrap bootstrap
+npm install axios
 -> App
   -> Header
   -> Main |state: people|
