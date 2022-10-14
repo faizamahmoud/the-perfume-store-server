@@ -47,3 +47,4 @@ https://github.com/faizamahmoud/perfume-api
 - npm i bcrypt
 - npm install method-override
 - Procfile
+- npm i method-override

@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const cors = require("cors")
 const morgan = require("morgan")
+const methodOverride = require('method-override');
 
 const PORT = process.env.PORT || 4000;
 require('dotenv').config();
@@ -16,9 +17,11 @@ const user = require('./controllers/user_controller');
 
 app.use(cors()); // to prevent cors errors, open access to all originsx
 app.use(morgan("dev")); // logging for development
+app.use(methodOverride('_method'));
 app.use(express.json()); 
+app.use(express.urlencoded({extended:false}))
 app.use('/inventory', inventory);
-app.use('/', auth);
+app.use('/auth', auth);
 app.use('/profile', user);
 
 
