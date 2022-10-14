@@ -3,25 +3,22 @@ const uniqueValidator = require('mongoose-unique-validator');
 
 
 var UserSchema = mongoose.Schema({
-    "name": {
-        first: { type: String, required: true },
-        last: { type: String, required: true }
-    },
+    "name":  { type: String, required: true },
     "username": { type: String, required: true, unique: true },
     "email": { type: String, index: true, unique: true, required: true, uniqueCaseInsensitive: true },
     "password": { type: String, required: true },
-    "perfumes purchased": {
-        type: [mongoose.Types.ObjectId],
+    "perfumes purchased":[{ //!need to add date purchased
+        type: mongoose.Types.ObjectId,
         ref: "Perfume",
-    },
-    "wishlist": {
-        type: [mongoose.Types.ObjectId],
+    }],
+    "wishlist": [{
+        type: mongoose.Types.ObjectId,
         ref: "Perfume",
-    },
-    "basket": {
-        type: [mongoose.Types.ObjectId],
+    }],
+    "basket": [{
+        type: mongoose.Types.ObjectId,
         ref: "Perfume",
-    },
+    }],
 
 },
     {

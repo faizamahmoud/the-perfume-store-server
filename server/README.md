@@ -6,3 +6,5 @@
 - npm install --save mongoose-unique-validator
 - npm i passport passport-jwt jsonwebtoken
 - npm i bcrypt
+- npm install method-override
+- Procfile
