@@ -19,10 +19,12 @@ router.get("/", requireToken, async (req, res) => {
     }
 });
 
-router.get("/:id", requireToken, async (req, res) => {
+router.get("/:id",  async (req, res) => {
     try {
-        handleUserValidateOwnership(req, await User.findById(req.params.id))
-
+        // handleUserValidateOwnership(req, await User.findById(req.params.id))
+        const currentUser = await User.findById({ req.params.id })
+        let jsonUser = JSON.stringify(currentUser)
+        console.log(jsonUser)
         res.status(200).json("user profile accessed")
     } catch (error) {
         res.status(400).json("Not authenticated")
