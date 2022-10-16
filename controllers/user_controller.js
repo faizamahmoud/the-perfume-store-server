@@ -1,28 +1,25 @@
 
 const express = require("express");
 const router = express.Router();
-const { User, Perfume } = require('../models');
-const { handleValidateOwnership, handleUserValidateOwnership, requireToken } = require("../middleware/auth");
+const { User} = require('../models');
+// const { handleValidateOwnership, handleUserValidateOwnership, requireToken } = require("../middleware/auth");
 
 
 
 
 // * Profile  - 
-router.get("/", requireToken, async (req, res) => {
+router.get("/", async (req, res) => {
     try {
         const currentUser = await User.findOne({ username: req.user.username })
         let jsonUser = JSON.stringify(currentUser)
-        // console.log(requireToken)
         res.json(jsonUser)
     } catch (error) {
         res.status(400).json(error)
     }
 });
 
-router.get("/:id", requireToken, async (req, res) => {
+router.get("/:id" ,async (req, res) => {
     try {
-        handleUserValidateOwnership(req, await User.findById(req.params.id))
-
         const currentUser = await User.findById(req.params.id)
         let jsonUser = JSON.stringify(currentUser)
         console.log(jsonUser)
@@ -33,34 +30,26 @@ router.get("/:id", requireToken, async (req, res) => {
 });
 
     // //* update: email, password, username
-    router.put("/:id", requireToken, async (req, res) => {
-        // console.log(req.user, req.params.id) 
+    
+    router.put("/:id", async (req, res) => {
         try {
-            handleUserValidateOwnership(req, await User.findById(req.params.id))
-            const updateUser = await User.findByIdAndUpdate(
-                req.params.id,
-                req.body,
-                { new: true }
-            )
-            res.status(200).json(updateUser)
+          res.json(
+            await User.findByIdAndUpdate(req.params.id, req.body)
+          )
         } catch (error) {
-            //send error
-            res.status(400).json({ error: error.message })
+          res.status(400).json(error);
         }
-    })
+      });
+      
 
 
-
-    router.delete("/:id", requireToken, async (req, res, next) => {
+      router.delete("/:id", async (req, res) => {
         try {
-            handleUserValidateOwnership(req, await User.findById(req.params.id));
-            const deleteProfile = await User.findByIdAndRemove(req.params.id);
-            res.status(200).json(deleteProfile);
-            // res.redirect('/inventory');
+          res.json(await User.findByIdAndRemove(req.params.id));
         } catch (error) {
-            res.status(400).json({ error: error.message });
+          res.status(400).json(error);
         }
-    });
-
+      });
+      
 
     module.exports = router;
