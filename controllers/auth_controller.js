@@ -15,8 +15,8 @@ router.post("/register", async (req, res) => {
     const passwordHash = await bcrypt.hash(req.body.password, salt);
     req.body.password = passwordHash;
     const newUser = await User.create(req.body);
-    // res.send(newUser)
-    res.status(200).json({ currentUser: newUser, isLoggedIn: true, token }); // * userDoc gets sent to front end and then gets transformed 
+    res.send(newUser)
+    // res.status(200).json({ currentUser: newUser, isLoggedIn: true, token }); // * userDoc gets sent to front end and then gets transformed 
   } catch (error) {
     res.status(400).json(error);
   }
