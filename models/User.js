@@ -7,6 +7,7 @@ var UserSchema = mongoose.Schema({
     "username": { type: String, required: true, unique: true },
     "email": { type: String, index: true, unique: true, required: true, uniqueCaseInsensitive: true },
     "password": { type: String, required: true },
+    "url":{ type: String},
     "perfumes purchased":[{ //!need to add date purchased
         type: mongoose.Types.ObjectId,
         ref: "Perfume",

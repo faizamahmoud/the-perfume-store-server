@@ -5,8 +5,6 @@ const { User} = require('../models');
 // const { handleValidateOwnership, handleUserValidateOwnership, requireToken } = require("../middleware/auth");
 
 
-
-
 // * Profile  - 
 router.get("/", async (req, res) => {
     try {
