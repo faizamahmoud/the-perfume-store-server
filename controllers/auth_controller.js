@@ -29,7 +29,8 @@ router.get('/login', async (req, res, next) => {
     const login = req.body.username
     const foundUser = await User.findOne({ username: login });
     // console.log(foundUser)
-    res.status(200).json("success");
+    
+    res.status(200).json({"success":foundUser});
     
   } catch (err) {
     res.status(400).json({ error: err.message });
