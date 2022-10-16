@@ -2,7 +2,7 @@
 const express = require("express");
 const router = express.Router();
 const { User, Perfume } = require('../models');
-const { handleValidateOwnership,handleUserValidateOwnership, requireToken } = require("../middleware/auth");
+const { handleValidateOwnership, handleUserValidateOwnership, requireToken } = require("../middleware/auth");
 
 
 
@@ -19,17 +19,18 @@ router.get("/", requireToken, async (req, res) => {
     }
 });
 
-router.get("/:id",  async (req, res) => {
+router.get("/:id", requireToken, async (req, res) => {
     try {
-        // handleUserValidateOwnership(req, await User.findById(req.params.id))
-        const currentUser = await User.findById({ req.params.id })
+        handleUserValidateOwnership(req, await User.findById(req.params.id))
+
+        const currentUser = await User.findById(req.params.id)
         let jsonUser = JSON.stringify(currentUser)
         console.log(jsonUser)
         res.status(200).json("user profile accessed")
     } catch (error) {
-        res.status(400).json("Not authenticated")
+        res.status(400).json({ error: error.message })
     }
-
+});
 
     // //* update: email, password, username
     router.put("/:id", requireToken, async (req, res) => {
@@ -56,16 +57,10 @@ router.get("/:id",  async (req, res) => {
             const deleteProfile = await User.findByIdAndRemove(req.params.id);
             res.status(200).json(deleteProfile);
             // res.redirect('/inventory');
-        } catch (err) {
-            res.status(400).json({ error: err.message });
+        } catch (error) {
+            res.status(400).json({ error: error.message });
         }
     });
-
-
-
-
-
-
 
 
     module.exports = router;

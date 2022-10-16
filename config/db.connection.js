@@ -1,6 +1,9 @@
 require('dotenv').config()
 const axios = require('axios')
 const mongoose = require('mongoose');
+const seed = require('./seedUsersData')
+const User = require('../models/User');
+const seedUsersData = require('./seedUsersData');
 
 // const { Perfume } = require('../models')
 const { MONGODB_URI } = process.env
@@ -29,5 +32,14 @@ mongoose.connection
 //     console.log(err);
 //   }
 // }
+
+// seedData();
+
+
+// User.insertMany(seed,(err, users) => {
+//   if (err){ console.log(err)}
+//     console.log("added provided users data", seedUsersData)
+//     mongoose.connection.close();
+//   });
 
 // seedData();
