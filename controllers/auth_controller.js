@@ -8,7 +8,7 @@ const { User } = require("../models");
 
 
 
-// Register
+// Register - keep auth
 router.post("/register", async (req, res) => {
   try {
     const salt = await bcrypt.genSalt(10);
@@ -16,7 +16,7 @@ router.post("/register", async (req, res) => {
     req.body.password = passwordHash;
     const newUser = await User.create(req.body);
     res.send(newUser)
-    // res.status(200).json({ currentUser: newUser, isLoggedIn: true, token }); // * userDoc gets sent to front end and then gets transformed 
+    res.status(200).json({ currentUser: newUser, isLoggedIn: true}); // * userDoc gets sent to front end and then gets transformed 
   } catch (error) {
     res.status(400).json(error);
   }
@@ -25,8 +25,10 @@ router.post("/register", async (req, res) => {
 // Login - token
 router.post("/login", async (req, res, next) => {
   try {
+    console.log(req.body)
     const loggingUser = req.body.username; //get username
     const foundUser = await User.findOne({ username: loggingUser });
+    console.log(foundUser)
     const token = await createUserToken(req, foundUser); //req- body with headers and compare against user - is it valid
     console.log("created token", token) //- verify in postman
     res.status(200).json({
