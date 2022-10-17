@@ -1,21 +1,9 @@
 # Sabah
 
 
-
-
-## User Stories:
-- As a user, I want to create an account
-- As a user, I want to login to my account 
-- As a user, I want to Browse available perfumes
-- As a user, I want to see the details of desired perfume
-- As a user, I want to add a perfume to my wishlist
-- As a user, I want to add a perfume to my cart
-- As a user, I want to purchase a perfume in my cart
-- As a user, I want to take a quiz and get matched to perfumes
-- As a user, I want to see matched perfumes
+### Sabah is perfume store where users can browse the perfumes in stock and buy or add to their wishlist. 
 
 ## API
-
 https://github.com/faizamahmoud/perfume-api
 
 
@@ -38,19 +26,6 @@ https://github.com/faizamahmoud/perfume-api
 ![image](https://user-images.githubusercontent.com/56799470/194635538-4a16fae8-4f09-46cf-8b21-2f4637a1eec0.png)
 
 ### https://miro.com/app/board/uXjVPP4pGDY=/
-
-- npm init -y
-- npm install dotenv mongoose express cors morgan
-- npm install --save-dev nodemon
-- npm install morgan cors
-- npm install axios
-- npm install --save mongoose-unique-validator
-- npm i passport passport-jwt jsonwebtoken
-- npm i bcrypt
-- npm install method-override
-- Procfile
-- npm i method-override
-
 
 
 <h3 align="left">Languages and Tools:</h3>
