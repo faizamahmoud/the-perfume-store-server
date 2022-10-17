@@ -1,7 +1,7 @@
 # Sabah
 
 
-### Sabah is perfume store where users can browse the perfumes in stock and buy or add to their wishlist. 
+Sabah is perfume store where users can browse the perfumes in stock and buy or add to their wishlist. 
 
 ## API
 https://github.com/faizamahmoud/perfume-api
