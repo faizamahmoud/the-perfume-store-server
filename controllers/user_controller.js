@@ -20,7 +20,7 @@ router.get("/:id" ,async (req, res) => {
     try {
         const currentUser = await User.findById(req.params.id)
         // let jsonUser = JSON.stringify(currentUser)
-        console.log(jsonUser)
+        
         res.status(200).json({user: currentUser})
     } catch (error) {
         res.status(400).json({ error: error.message })
