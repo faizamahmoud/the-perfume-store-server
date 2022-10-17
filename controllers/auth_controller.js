@@ -17,18 +17,18 @@ router.post("/register", async (req, res) => {
     const newUser = await User.create(req.body);
     // res.send(newUser)
     // res.sendStatus(status)
-    res.status(200).json({ currentUser: newUser, isLoggedIn: true}); 
+    res.status(200).json({ currentUser: newUser}); 
   } catch (error) {
     res.status(400).json(error);
   }
 });
 
 
-router.get('/login', async (req, res, next) => {
+router.get('/login/:userId', async (req, res, next) => {
   try {
-    const login = req.body.username
-    const foundUser = await User.findOne({ username: login });
-    // console.log(foundUser)
+    const login = req.params.userId
+    const foundUser = await User.findOne({ userId: login });
+    console.log(foundUser)
     
     res.status(200).json({"success":foundUser});
     
