@@ -8,11 +8,11 @@ https://github.com/faizamahmoud/perfume-api
 
 
 ## Routes
-![image](https://user-images.githubusercontent.com/56799470/194616337-cedd3884-8580-42c7-bc0a-18b6ae80c634.png)
+![image](https://user-images.githubusercontent.com/56799470/196195009-0381b8f9-5dbd-4514-967a-c2098a0c3221.png)
 
 
 ## Client-side
-![image](https://user-images.githubusercontent.com/56799470/196195009-0381b8f9-5dbd-4514-967a-c2098a0c3221.png)
+
 
 ![image](https://user-images.githubusercontent.com/56799470/196195684-b073b80e-4849-4a47-a376-bbb07a77157c.png)
 
