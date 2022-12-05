@@ -7,7 +7,6 @@ const { createUserToken } = require("../middleware/auth");
 const { User } = require("../models");
 
 
-
 //? @desc Register new user
 //? @route POST /auth/register
 //? @access Public
@@ -29,7 +28,8 @@ router.post("/register", async (req, res, next) => {
         _id: newUser.id,
         username: newUser.username,
         email: newUser.email,
-        token: authenticatedUserToken
+        token: authenticatedUserToken, 
+        isSignedUp: true
       });
     } else {
       res.status(400).json({ error: "Something went wrong" })
