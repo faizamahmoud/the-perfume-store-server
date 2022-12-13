@@ -41,13 +41,13 @@ const PerfumeSchema = new mongoose.Schema({
   "units": {
     type: Number,
     require: true
-  },
-  "owner": {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'User',
-    // required: true
-    default:''
   }
+  // "owner": {
+  //   type: mongoose.Schema.Types.ObjectId,
+  //   ref: 'User',
+  //   // required: true
+  //   default:''
+  // }
 
 }, { timestamps: true });
 
