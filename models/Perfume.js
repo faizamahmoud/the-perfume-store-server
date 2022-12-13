@@ -56,3 +56,5 @@ const PerfumeSchema = new mongoose.Schema({
 const Perfume = mongoose.model("Perfume", PerfumeSchema);
 
 module.exports = Perfume;
+
+
