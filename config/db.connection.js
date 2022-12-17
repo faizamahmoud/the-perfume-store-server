@@ -42,16 +42,16 @@ mongoose.connection
 //     mongoose.connection.close();
 //   });
 
-async function reloadData() {
-	try {
-		let deleted = await Perfume.deleteMany({});
-		console.log(deleted)
-		// console.log(deleted);
-		let reloading = await Perfume.insertMany(seedPerfumeData);
-		console.log(reloading)
-	} catch (err) {
-		console.log(err);
-	}
-}
+// async function reloadData() {
+// 	try {
+// 		let deleted = await Perfume.deleteMany({});
+// 		console.log(deleted)
+// 		// console.log(deleted);
+// 		let reloading = await Perfume.insertMany(seedPerfumeData);
+// 		console.log(reloading)
+// 	} catch (err) {
+// 		console.log(err);
+// 	}
+// }
 
 // reloadData();
