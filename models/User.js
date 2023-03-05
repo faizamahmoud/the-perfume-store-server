@@ -1,4 +1,4 @@
-
+// one to many, add Perfume and User img with choices
 const mongoose = require('mongoose');
 const uniqueValidator = require('mongoose-unique-validator');
 

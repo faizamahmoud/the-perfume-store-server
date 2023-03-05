@@ -1,57 +1,55 @@
 require('dotenv').config()
 const axios = require('axios')
 const mongoose = require('mongoose');
-// const seed = require('./seedUsersData')
 const Perfume = require('../models/Perfume');
-const seedPerfumeData = require('./seedPerfumeData');
+// const { Perfume, User } = require('../models')
+const randomInt = require('random-integer');
+const seed = require('./seed');
 
-// const { Perfume } = require('../models')
+
 const { MONGODB_URI } = process.env
 mongoose.connect(MONGODB_URI);
 
 
 
 mongoose.connection
-  .on("open", () => console.log("This is my awesome amazing connection"))
-  .on("close", () => console.log("Your are disconnected from mongoose :'("))
-  .on("error", (error) => console.log(error));
-
-// const seedData = async () => {
-//   try {
-//     const response = await fetch('https://my-perfumes-api.herokuapp.com/perfumes');
-//     let perfumesList = await response.json();
-//     console.log(perfumesList)
-//     perfumesList = perfumesList.data
-//     console.log('hello', response);
-
-//     const addPerfume = await Perfume.insertMany(perfumesList);
-
-//     console.log(addPerfume)
-
-//   } catch (err) {
-//     console.log(err);
-//   }
-// }
-
-// seedData();
+	.on("open", () => console.log("This is my awesome amazing connection"))
+	.on("close", () => console.log("Your are disconnected from mongoose :'("))
+	.on("error", (error) => console.log(error));
 
 
-// Perfume.insertMany(seed,(err, users) => {
-//   if (err){ console.log(err)}
-//     console.log("added provided users data", seedPerfumeData)
-//     mongoose.connection.close();
-//   });
 
-// async function reloadData() {
-// 	try {
-// 		let deleted = await Perfume.deleteMany({});
-// 		console.log(deleted)
-// 		// console.log(deleted);
-// 		let reloading = await Perfume.insertMany(seedPerfumeData);
-// 		console.log(reloading)
-// 	} catch (err) {
-// 		console.log(err);
-// 	}
-// }
+
+const uniqueBrands = [...new Set(seed.map(item => item.Brand))];
+
+const uniqueObjects = seed.filter(item => uniqueBrands.includes(item.Brand));
+
+const getRandomSubset = (array, size) => {
+	const subset = [];
+	const usedIndexes = new Set();
+  
+	while (subset.length < size && usedIndexes.size < array.length) {
+	  const index = randomInt(0, array.length - 1);
+	  if (!usedIndexes.has(index)) {
+		subset.push(array[index]);
+		usedIndexes.add(index);
+	  }
+	}
+	return subset;
+  }
+
+const subset = getRandomSubset(uniqueObjects, 100);
+
+
+async function reloadData() {
+	try {
+		let deletePreviousData = await Perfume.deleteMany({});
+		let reloading = await Perfume.insertMany(subset)
+		console.log(reloading)
+	} catch (err) {
+		console.log(err)
+	}
+
+}
 
 // reloadData();

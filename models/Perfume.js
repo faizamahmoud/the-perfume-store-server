@@ -1,50 +1,31 @@
 const mongoose = require("mongoose");
+const User = require('./User')
+
 
 const PerfumeSchema = new mongoose.Schema({
-  "id": Number,
-  "brand": {
+  "Name": {
     type: String,
     require: true
   },
-  "name": {
+  "Brand": {
     type: String,
     require: true
   },
-  "price": {
-    type: Number,
-    require: true
-  },
-  "description": {
+  "Description": {
     type: String,
     require: true
   },
-  "size": {
+  "Notes": {
     type: String,
     require: true
   },
-  "image": String,
-  "occasions": {
-    type: [String],
-    require: true
-  },
-  "scent-family": {
+  "ImageUrl": {
     type: String,
-    require: true
-  },
-  "type": {
-    type: String,
-    require: true
-  },
-  "top notes": [String],
-  "middle notes": [String],
-  "base notes": [String],
-  "units": {
-    type: Number,
     require: true
   }
   // "owner": {
   //   type: mongoose.Schema.Types.ObjectId,
-  //   ref: 'User',
+  //   ref: User,
   //   // required: true
   //   default:''
   // }
