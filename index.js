@@ -5,7 +5,7 @@ const app = express();
 const cors = require("cors");
 const morgan = require("morgan");
 const methodOverride = require("method-override");
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 5000;
 require("dotenv").config();
 const {readdirSync} = require("fs");
 
@@ -30,7 +30,7 @@ app.use(express.urlencoded({extended:false}));
 
 /*--- Route handlers ---*/ 
 app.use("/auth", auth);
-app.use("/controllers/inventory", inventory);
+app.use("/inventory", inventory);
 app.use("/profile", user);
 
 
