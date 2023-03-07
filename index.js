@@ -10,7 +10,6 @@ const PORT = 4000;
 require("dotenv").config();
 // const {readdirSync} = require("fs");
 
-
 /*---built-in middleware functions provided by express---*/
 app.use(express.json()); 
 app.use(methodOverride("_method"));
