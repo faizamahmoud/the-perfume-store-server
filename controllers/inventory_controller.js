@@ -1,3 +1,4 @@
+/* controller handles user requests and generating appropriate response*/
 const express = require("express");
 const router = express.Router();
 const {Perfume}  = require("../models");
