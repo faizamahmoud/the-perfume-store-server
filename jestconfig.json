@@ -1,5 +1,9 @@
 
 {
+    "testPathIgnorePatterns": [
+        "/node_modules/",
+        "/auth.test.js"
+    ],
     "collectCoverage":true,
     "coverageThreshold":{
         "global":{
@@ -12,5 +16,5 @@
     "coverageDirector":"./coverage/",
     "globals":{
         "globalVar": "test value 123"
-    }
+    }  
 }

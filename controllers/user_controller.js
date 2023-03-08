@@ -6,7 +6,7 @@ const { User} = require("../models");
 
 
 // * Profile  - 
-router.get("/", async (req, res) => {
+const getUser = async (req, res) => {
 	try {
 		const currentUser = await User.findOne({ username: req.user.username });
 		let jsonUser = JSON.stringify(currentUser);
@@ -14,7 +14,7 @@ router.get("/", async (req, res) => {
 	} catch (error) {
 		res.status(400).json(error);
 	}
-});
+}
 
 router.get("/:id" ,async (req, res) => {
 	try {
@@ -52,4 +52,6 @@ router.delete("/:id", async (req, res) => {
 });
       
 
-module.exports = router;
+module.exports = {
+	getUser
+};

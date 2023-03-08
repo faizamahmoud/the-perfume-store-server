@@ -1,11 +1,16 @@
+/*
+* import controller
+* router takes path and module from controller
+
+*/
+
 const express = require('express');
 const router = express.Router();
-const perfumeController = require('../controllers/perfumeController');
+const {getPerfumes, getUserById} = require('../controllers/inventory_controller');
 
-// GET all perfumes
-router.get('/', perfumeController.getAllPerfumes);
 
-// GET a specific perfume by ID
-router.get('/:id', perfumeController.getPerfumeById);
+router.get("/", getPerfumes)
+
+router.get("/inventory", getUserById);
 
 module.exports = router;

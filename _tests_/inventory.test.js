@@ -1,10 +1,7 @@
 /* supertest to test routes*/
 /* describe() - groups together a set of individual tests related to it*/ 
-const app = require("../index.js");
-const request = require("supertest");
+const app = require("../utils/server");
 const supertest = require("supertest");
-
-
 
 
 // GET requests to api/users endpoint, calls supertest.get()
@@ -14,7 +11,7 @@ describe("perfumes", () =>{
     describe("given the product does not exist", () =>{
       it("should return a 404", async () =>{
         const id = 'perfume 123'
-        await supertest().get()
+        await supertest(app).get(`/`).expect(404)
       })
     })
   })
