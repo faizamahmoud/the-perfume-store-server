@@ -1,4 +1,5 @@
-const { connect } = require('./config/db.connection');
+
+const { connect } = require('./config/db.connection')
 const createServer = require('./utils/server')
 const PORT = process.env.PORT || 4000;
 
