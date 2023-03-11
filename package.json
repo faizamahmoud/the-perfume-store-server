@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "jest --watchAll --config=jestconfig.json --testPathIgnorePatterns=ignore"
+    "test": "jest --watchAll --detectOpenHandles --config=jestconfig.json --testPathIgnorePatterns=ignore"
+    
   },
   "keywords": [],
   "author": "",

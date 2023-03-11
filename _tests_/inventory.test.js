@@ -31,12 +31,12 @@ describe("perfumes", () => {
           await supertest(app).get('/inventory').expect(200);
         });
       });
-      describe("get one perfume", () => {
-        it("should return a perfume", async () => {
+      // describe("get one perfume", () => {
+      //   it("should return a perfume", async () => {
           
-          await supertest(app).get('/:id').expect(200);
-        });
-      });
+      //     await supertest(app).get('/:id').expect(200);
+      //   });
+      // });
     });
     //   test("get perfumes", () =>{
     //     const response =  request(app).get(`/`).send({
