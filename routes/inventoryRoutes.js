@@ -11,6 +11,6 @@ const {getPerfumes, getUserById} = require('../controllers/inventory_controller'
 
 router.get("/", getPerfumes)
 
-router.get("/inventory", getUserById);
+router.get("/:id", getUserById);
 
 module.exports = router;

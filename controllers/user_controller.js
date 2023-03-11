@@ -1,12 +1,11 @@
 
 const express = require("express");
-const router = express.Router();
 const { User} = require("../models");
 // const { handleValidateOwnership, handleUserValidateOwnership, requireToken } = require("../middleware/auth");
 
 
 // * Profile  - 
-const getUser = async (req, res) => {
+const getUsers = async (req, res) => {
 	try {
 		const currentUser = await User.findOne({ username: req.user.username });
 		let jsonUser = JSON.stringify(currentUser);
@@ -16,42 +15,43 @@ const getUser = async (req, res) => {
 	}
 }
 
-router.get("/:id" ,async (req, res) => {
+const findUser = async (req, res) => {
 	try {
 		const currentUser = await User.findById(req.params.id);
-		// let jsonUser = JSON.stringify(currentUser)
-        
-		res.status(200).json({user: currentUser});
+		res.json({user: currentUser});
 	} catch (error) {
 		res.status(400).json({ error: error.message });
 	}
-});
+};
 
 // //* update: email, password, username
     
-router.put("/:id", async (req, res) => {
+const updateUser = async (req, res) => {
 	try {
 
-		console.log(req.body);
-		res.json(
-			await User.findByIdAndUpdate(req.params.id, req.body)
-		);
+		// console.log(req.body);
+		const user = await User.findByIdAndUpdate(req.params.id,req.body)
+		res.json(user)
 	} catch (error) {
 		res.status(400).json(error);
 	}
-});
+};
       
 
 
-router.delete("/:id", async (req, res) => {
+const deleteUser = async (req, res) => {
 	try {
-		res.json(await User.findByIdAndRemove(req.params.id));
+		const user = await User.findByIdAndRemove(req.params.id);
+		res.json(user)
 	} catch (error) {
 		res.status(400).json(error);
 	}
-});
+};
       
 
 module.exports = {
-	getUser
+	getUsers,
+	findUser,
+	updateUser,
+	deleteUser
 };

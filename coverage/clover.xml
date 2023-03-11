@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1678235352984" clover="3.2.0">
-  <project timestamp="1678235352984" name="All files">
-    <metrics statements="182" coveredstatements="107" conditionals="19" coveredconditionals="6" methods="24" coveredmethods="3" elements="225" coveredelements="116" complexity="0" loc="182" ncloc="182" packages="6" files="13" classes="13"/>
+<coverage generated="1678392261690" clover="3.2.0">
+  <project timestamp="1678392261691" name="All files">
+    <metrics statements="188" coveredstatements="116" conditionals="19" coveredconditionals="6" methods="25" coveredmethods="9" elements="232" coveredelements="131" complexity="0" loc="188" ncloc="188" packages="6" files="13" classes="13"/>
     <package name="config">
-      <metrics statements="30" coveredstatements="21" conditionals="4" coveredconditionals="4" methods="9" coveredmethods="3"/>
+      <metrics statements="30" coveredstatements="25" conditionals="4" coveredconditionals="4" methods="9" coveredmethods="7"/>
       <file name="db.connection.js" path="/Users/faizamahmoud/Desktop/SEI/deliverables/capstone-project/the-perfume-store/config/db.connection.js">
-        <metrics statements="29" coveredstatements="20" conditionals="4" coveredconditionals="4" methods="9" coveredmethods="3"/>
+        <metrics statements="29" coveredstatements="24" conditionals="4" coveredconditionals="4" methods="9" coveredmethods="7"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
-        <line num="12" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="0" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
         <line num="26" count="2187" type="stmt"/>
         <line num="28" count="2187" type="stmt"/>
@@ -24,8 +24,8 @@
         <line num="31" count="1" type="stmt"/>
         <line num="32" count="1" type="stmt"/>
         <line num="34" count="1" type="cond" truecount="2" falsecount="0"/>
-        <line num="35" count="103" type="stmt"/>
-        <line num="36" count="103" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="101" type="stmt"/>
+        <line num="36" count="101" type="cond" truecount="2" falsecount="0"/>
         <line num="37" count="100" type="stmt"/>
         <line num="38" count="100" type="stmt"/>
         <line num="41" count="1" type="stmt"/>
@@ -42,7 +42,7 @@
       </file>
     </package>
     <package name="controllers">
-      <metrics statements="61" coveredstatements="22" conditionals="2" coveredconditionals="0" methods="8" coveredmethods="0"/>
+      <metrics statements="63" coveredstatements="23" conditionals="2" coveredconditionals="0" methods="8" coveredmethods="1"/>
       <file name="auth_controller.js" path="/Users/faizamahmoud/Desktop/SEI/deliverables/capstone-project/the-perfume-store/controllers/auth_controller.js">
         <metrics statements="26" coveredstatements="8" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="2" count="1" type="stmt"/>
@@ -73,45 +73,47 @@
         <line num="68" count="1" type="stmt"/>
       </file>
       <file name="inventory_controller.js" path="/Users/faizamahmoud/Desktop/SEI/deliverables/capstone-project/the-perfume-store/controllers/inventory_controller.js">
-        <metrics statements="11" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <metrics statements="13" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
-        <line num="8" count="0" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
         <line num="17" count="0" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
       </file>
       <file name="user_controller.js" path="/Users/faizamahmoud/Desktop/SEI/deliverables/capstone-project/the-perfume-store/controllers/user_controller.js">
-        <metrics statements="24" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <metrics statements="24" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="9" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
         <line num="12" count="0" type="stmt"/>
-        <line num="13" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="19" count="1" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
         <line num="33" count="0" type="stmt"/>
-        <line num="35" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
         <line num="36" count="0" type="stmt"/>
-        <line num="40" count="0" type="stmt"/>
-        <line num="46" count="1" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
         <line num="47" count="0" type="stmt"/>
-        <line num="48" count="0" type="stmt"/>
-        <line num="50" count="0" type="stmt"/>
-        <line num="55" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
       </file>
     </package>
     <package name="middleware">
@@ -181,7 +183,7 @@
       </file>
     </package>
     <package name="routes">
-      <metrics statements="26" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="29" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="authRoutes.js" path="/Users/faizamahmoud/Desktop/SEI/deliverables/capstone-project/the-perfume-store/routes/authRoutes.js">
         <metrics statements="15" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
@@ -210,35 +212,39 @@
         <line num="16" count="1" type="stmt"/>
       </file>
       <file name="userRoutes.js" path="/Users/faizamahmoud/Desktop/SEI/deliverables/capstone-project/the-perfume-store/routes/userRoutes.js">
-        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
       </file>
     </package>
     <package name="utils">
-      <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <file name="server.js" path="/Users/faizamahmoud/Desktop/SEI/deliverables/capstone-project/the-perfume-store/utils/server.js">
-        <metrics statements="17" coveredstatements="17" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
+        <metrics statements="18" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
         <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
         <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="14" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
         <line num="23" count="1" type="stmt"/>
-        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
         <line num="26" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
       </file>
     </package>
   </project>

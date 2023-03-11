@@ -1,15 +1,15 @@
 const express = require("express");
 const router = express.Router();
-const {getUser} = require("../controllers/user_controller");
+const {getUsers, findUser, updateUser, deleteUser} = require("../controllers/user_controller");
 
 // * Profile - 
-router.get("/", getUser);
+router.get("/", getUsers);
 
-// router.get("/:id", userController.getUserById);
+router.get("/:id", findUser);
 
-// // //* update: email, password, username
-// router.put("/:id", userController.updateUserById);
+// //* update: email, password, username
+router.put("/:id", updateUser);
 
-// router.delete("/:id", userController.deleteUserById);
+router.delete("/:id", deleteUser);
 
 module.exports = router;
