@@ -2,7 +2,7 @@
      "routes": [
       { "src": "/auth/.*", "dest": "index.js" },
       { "src": "/inventory/.*", "dest": "index.js" },
-      { "src": "/profile/.*", "dest": "index.js" },
-      { "src": ".*", "dest": "/index.html" }
+      { "src": "/profile/.*", "dest": "index.js" }
+      
     ]
   }
