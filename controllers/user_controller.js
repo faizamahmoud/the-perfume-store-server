@@ -2,7 +2,11 @@
 const express = require("express");
 const { User} = require("../models");
 // const { handleValidateOwnership, handleUserValidateOwnership, requireToken } = require("../middleware/auth");
+// The handleValidateOwnership and handleUserValidateOwnership functions are used to check if the user making the request is the owner of the resource they are trying to access, and throw an error if they are not authorized to access it.
 
+// These functions can be used when you need to restrict access to certain resources based on ownership. For example, if you have a route that allows users to update their own profile information, you would use handleUserValidateOwnership to ensure that the user making the request is actually the owner of the profile they are trying to update. Similarly, if you have a route that allows owners of a product to update its information, you would use handleValidateOwnership to ensure that the user making the request is the owner of the product they are trying to update.
+
+// These functions can help you prevent unauthorized access to sensitive data by ensuring that only the appropriate users are able to access and modify the data.
 
 // * Profile  - 
 const getUsers = async (req, res) => {

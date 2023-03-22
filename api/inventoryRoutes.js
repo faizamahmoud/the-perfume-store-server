@@ -9,8 +9,8 @@ const router = express.Router();
 const {getPerfumes, getUserById} = require('../controllers/inventory_controller');
 
 
-router.get("/", getPerfumes)
+router.get("/inventory", getPerfumes)
 
-router.get("/:id", getUserById);
+router.get("/inventory/:id", getUserById);
 
 module.exports = router;

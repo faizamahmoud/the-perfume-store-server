@@ -5,9 +5,10 @@ const express = require("express");
 const cors = require("cors");
 const morgan = require("morgan");
 const methodOverride = require("method-override");
-const authRoutes = require("../routes/authRoutes");
-const inventoryRoutes = require("../routes/inventoryRoutes");
-const userRoutes = require("../routes/userRoutes");
+const authRoutes = require("../api/authRoutes");
+const inventoryRoutes = require("../api/inventoryRoutes");
+const userRoutes = require("../api/userRoutes");
+const cartRoute = require("../api/cartRoute");
 
 function createServer () {
 
@@ -20,9 +21,10 @@ app.use(morgan("dev")); // logging for development
 
 app.use(express.urlencoded({extended:false}));
 
+app.use("/", inventoryRoutes);
 app.use("/auth", authRoutes);
-app.use("/inventory", inventoryRoutes);
 app.use("/profile", userRoutes);
+app.use("/cart", cartRoute);
 
 return app;
 }

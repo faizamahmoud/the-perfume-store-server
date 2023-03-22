@@ -1,11 +1,11 @@
 /* controller handles user requests and generating appropriate response, only interacts with the model*/
-const express = require("express");
 const {Perfume}  = require("../models");
 
 
 const getPerfumes = async (req, res) => {
 	try {
 		const perfumes = await Perfume.find();
+		// console.log(perfumes)
 		return res.json(perfumes);
 	} catch (error) {
 		res.status(400).json(error);

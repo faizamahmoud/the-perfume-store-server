@@ -8,15 +8,15 @@
   ],
   "routes": [
     {
-      "src": "/routes/auth/.*",
+      "src": "/api/auth/.*",
       "dest": "index.js"
     },
     {
-      "src": "/routes/inventory/.*",
+      "src": "/api/inventory/.*",
       "dest": "index.js"
     },
     {
-      "src": "/routes/profile/.*",
+      "src": "/api/profile/.*",
       "dest": "index.js"
     }
   ]

@@ -23,13 +23,7 @@ const PerfumeSchema = new mongoose.Schema({
 		type: String,
 		require: true
 	}
-	// "owner": {
-	//   type: mongoose.Schema.Types.ObjectId,
-	//   ref: User,
-	//   // required: true
-	//   default:''
-	// }
-
+	
 }, { timestamps: true });
 
 
