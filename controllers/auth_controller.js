@@ -67,7 +67,6 @@ const login = async (req, res) => {
 };
 
 const logout = async (req, res) => {
-
 	try {
 		res.setHeader('Set-Cookie', 'token=; HttpOnly; Path=/; Expires=Thu, 01 Jan 1970 00:00:00 GMT');
 		return res.json({ success: true, message: 'Logged out successfully!' });
@@ -76,11 +75,11 @@ const logout = async (req, res) => {
 	}
 };
 
-router.post('/logout', isAuth, logout)
+
 
 
 module.exports = {
-	register, login
+	register, login, logout
 };
 
 

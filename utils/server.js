@@ -16,14 +16,22 @@ const app = express();
 
 app.use(express.json()); 
 app.use(methodOverride("_method"));
-app.use(cors()); // to prevent cors errors, open access to all originsx
+// * preflight, options, headers
+
+// app.use(cors({
+//     origin: 'http://localhost:3000'
+//   }));
+
+app.use(cors({
+  origin:"*"
+}))
 app.use(morgan("dev")); // logging for development
 
 app.use(express.urlencoded({extended:false}));
 
 app.use("/", inventoryRoutes);
 app.use("/auth", authRoutes);
-app.use("/profile", userRoutes);
+app.use("/user", userRoutes);
 app.use("/cart", cartRoute);
 
 return app;

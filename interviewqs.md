@@ -1,0 +1,12 @@
+What is CORS?
+- What is Cross Origin?
+- Are subdomain, host, port, protocol fall under Cross-Origin mechanism?
+- How does Cross Origin Request Sharing works behind the scenes?
+- What is CORS preflight?
+- What is the OPTIONS call?
+- What are the additional HTTP Headers required?
+- Does server always make Preflight options call in CORS protocol?
+- What browser versions support CORS?
+- Access Control Allow Origin Error?
+- How to solve CORS Error?
+- How to resolve CORS issue in Google Chrome?
