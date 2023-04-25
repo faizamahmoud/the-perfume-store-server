@@ -4,7 +4,7 @@ const Perfume = require("../models/Perfume");
 // const { Perfume, User } = require('../models')
 const randomInt = require("random-integer");
 const seed = require("./seed");
-
+mongoose.set('strictQuery', true);
 
 const { MONGODB_URI } = process.env;
 // mongoose.connect(MONGODB_URI);
