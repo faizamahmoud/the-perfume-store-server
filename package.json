@@ -1,5 +1,5 @@
 {
-  "name": "server",
+  "name": "the-perfume-store",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,8 @@
     "node": "v20.0.0"
   },
   "scripts": {
-    "start": "node utils/server.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "jest --watchAll --detectOpenHandles --config=jestconfig.json --testPathIgnorePatterns=ignore"
   },
   "keywords": [],
