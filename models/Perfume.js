@@ -1,6 +1,4 @@
 const mongoose = require("mongoose");
-const User = require("./User");
-
 
 const PerfumeSchema = new mongoose.Schema({
 	"Name": {
@@ -22,8 +20,11 @@ const PerfumeSchema = new mongoose.Schema({
 	"ImageUrl": {
 		type: String,
 		require: true
+	}, 
+	"Price": {
+		type: Number,
+		default: Math.floor(Math.random() * 101) + 100 
 	}
-	
 }, { timestamps: true });
 
 

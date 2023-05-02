@@ -1,7 +1,6 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
 const Perfume = require("../models/Perfume");
-// const { Perfume, User } = require('../models')
 const randomInt = require("random-integer");
 const seed = require("./seed");
 mongoose.set('strictQuery', true);
@@ -46,8 +45,10 @@ const subset = getRandomSubset(uniqueObjects, 100);
 
 async function reloadData() {
 	try {
-		let deletePreviousData = await Perfume.deleteMany({});
+		let deletePreviousData = await Perfume.deleteMany({}, { maxTimeMS: 60000 });
+		console.log(deletePreviousData)
 		let reloading = await Perfume.insertMany(subset);
+		console.log(reloading[0])
 	} catch (err) {
 		console.log(err);
 	}
@@ -59,3 +60,5 @@ module.exports = {
 	connect,
 	close
   };
+
+

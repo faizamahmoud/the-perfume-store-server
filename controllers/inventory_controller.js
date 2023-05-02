@@ -5,7 +5,7 @@ const {Perfume}  = require("../models");
 const getPerfumes = async (req, res) => {
 	try {
 		const perfumes = await Perfume.find();
-		// console.log(perfumes)
+		console.log(perfumes)
 		return res.json(perfumes);
 	} catch (error) {
 		res.status(400).json(error);
